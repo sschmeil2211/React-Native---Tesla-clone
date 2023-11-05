@@ -1,0 +1,21 @@
+type User @model {
+  id: ID!
+  username: String!
+  email: String!
+  posts: [Post] @connection(keyName: "byUser", fields: ["id"])
+}
+
+type Post @model {
+  id: ID!
+  videoUri: String!
+  description: String!
+
+  blog: Blog @belongsTo
+  comments: [Comment] @hasMany
+}
+
+type Comment @model {
+  id: ID!
+  post: Post @belongsTo
+  content: String!
+}
