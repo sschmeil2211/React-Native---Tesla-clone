@@ -49,6 +49,7 @@ Feel free to explore and customize the code according to your needs.
 
 ## Technologies Used
 + React Native
++ Javascript
 
 ## Developers
 Sebastian Schmeil
